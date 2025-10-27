@@ -11,23 +11,44 @@ document.getElementById("wr2").onclick = function qara2(){
     h2.innerHTML = "Абайдың Екінші қара сөзі"
 }
 
-let index = 0;
-const slides = document.querySelectorAll(".slide");
-
-function showSlide(i) {
-  slides.forEach((slide, n) => {
-    slide.style.display = n === i ? "block" : "none";
-  });
+let count = 1;
+let d1 = document.getElementById("sl1")
+let d2 = document.getElementById("sl2")
+document.getElementById("ha").onclick = function co(){
+  count++;
+  updiv()
+}
+document.getElementById("ah").onclick = function co(){
+  count--;
+  updiv()
+}
+function updiv(){
+if (count %2 == 0) {
+    d1.style.display = "none";
+    d2.style.display = "block";
+  } else {
+    d1.style.display = "block";
+    d2.style.display = "none";
+  }
 }
 
-function nextSlide() {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}
+// let index = 0;
+// const slides = document.querySelectorAll(".slide");
 
-function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-}
+// function showSlide(i) {
+//   slides.forEach((slide, n) => {
+//     slide.style.display = n === i ? "block" : "none";
+//   });
+// }
 
-showSlide(index);
+// function nextSlide() {
+//   index = (index + 1) % slides.length;
+//   showSlide(index);
+// }
+
+// function prevSlide() {
+//   index = (index - 1 + slides.length) % slides.length;
+//   showSlide(index);
+// }
+
+// showSlide(index);
