@@ -10,3 +10,24 @@ document.getElementById("wr2").onclick = function qara2(){
     let h2 = document.getElementById("hh");
     h2.innerHTML = "Абайдың Екінші қара сөзі"
 }
+
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(i) {
+  slides.forEach((slide, n) => {
+    slide.style.display = n === i ? "block" : "none";
+  });
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+
+showSlide(index);
