@@ -55,23 +55,11 @@ if (count %2 == 0) {
   }
 }
 
-// let index = 0;
-// const slides = document.querySelectorAll(".slide");
-
-// function showSlide(i) {
-//   slides.forEach((slide, n) => {
-//     slide.style.display = n === i ? "block" : "none";
-//   });
-// }
-
-// function nextSlide() {
-//   index = (index + 1) % slides.length;
-//   showSlide(index);
-// }
-
-// function prevSlide() {
-//   index = (index - 1 + slides.length) % slides.length;
-//   showSlide(index);
-// }
-
-// showSlide(index);
+const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
