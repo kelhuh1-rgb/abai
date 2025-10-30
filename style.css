@@ -220,7 +220,7 @@ hr {
 footer {
     background-color: rgb(55, 51, 41);
     color: white;
-    height: 370px;
+    height: 400px;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -230,9 +230,9 @@ footer {
     box-shadow: inset 0 3px 8px rgba(0,0,0,0.5);
 }
 .p{
-<<<<<<< HEAD
+
     color: rgb(185, 197, 133);
-=======
+
     color: rgb(192, 194, 140);
->>>>>>> 66f14d9879eb4234c4e1b13a410f60235cd074c4
+
 }
